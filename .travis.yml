@@ -1,11 +1,18 @@
 language: node_js
 node_js:
-  	- "9"
+  - "9"
+env:
+  global:
+  - secure: niXDMCaVYNGYlIWbFn8DScwGjgIbKF7uwGHRYF2m+5A+gQPv3/xCE4IiEOdx2ePr97adhWPG7HRW7pB32vnHQGgHFyJfuXepGaypSKmsTSjMCdOPSFJwpZCfAKpbT7aq9wl+nZIEpuh9aNBmwFTJjo9FtbzUQQf/RAAOea8upZnONcwlqH1YCM5mNuL43lMqhMUBOBAENTPQ6xfKX7mMdapzn6XEvkyMdMT8+0rFc3Mys5oUBN5Hk921d93qiZcYXl/GORpfUsZ6M6cO+FZ/4m/pAAGYa7tQH2i3HO88KIo+4D4faBCn7TbBtCsIcOqyKtCrgRkXjpaozdSjamiBAFttD0MbCccaJH8jjtf2eBRViaTZLF6Zp/uPMMZYRi8CDyTlMsq1qR0ZrRVGeOIKbTVt0LO5Zj0m0FE837XKqzUuFA9Fq0iBGkGYgoKkVYMVIOP2RBbj5AvKG2rJqz3WIJCruIlr4Gi2mpckikafqsYU0eMEMS9N5GOOGnqfPv90voGtXnA1hAGk8/fqACH6XZcPA0yFW5i5LN0aMvTXXRzPbD9g/pyzKn7c+tS7qjk8KSpZ/6uL1JT+Sz0X57Uo5wIxT0cLqHO0RRA2JqwYJHKN8+V697JZvMJftOj+tpkON4MOXsB0oSQvFKjGs8JjWaoj8IwjR4FA9f/tCUr1hfs=
+  - secure: H9kxqPMCW7Tku3N9z1CigVesP8iLAEpOQdc8UYejqLK/ujsZUF7ZVncL6gh9+yaA6ms7cF3+5WB7Qes2N7KY1IYShJ+jJgf2QWrlCKOkEsKHViw9fM0BOZd4wMxTyR0TeYNmQd115zGqPd9OcNAP5qLN/apSTO21M/ZF88xpRXJOgVIG2jIxPoIQxfwOd4r9MfTFaHB1qNj2KQoerW+NwOHsWHcqU4jpGwJmZ+1AA8SoUd2RmPiHR+VJj6cQZWHWQHpxv4VUgGhVdRva7HSU3geyluOasjNUzCb4LojJXk6GnvguxX/6Z72veocCCP6za4w8YqIy1XZRSZswU7tl2hhIA0p7i9OzaLUY73E2c/fGi7qF1qHSub92pct11iRGOj+8n2pbr6ocfpHOI++Zl2CM3JZggDAwVg3CincvzhdOAy1Lhje1MT5iue2dF6E9q6wFVYShp36nbqERmOOy+hueaNPeGAiT8vjdZjU2aDJ0B5TDZqXFZcJI7oqh6Al+g1qvpt56PjhnskR5NeL+jBceLicKXHzJnLq6Ogb+bqgWGqlpTastvQposaRRuHQgNgaID8fXPTGCk2CHsiWX9gtKl9bGFpVRT+OFutJA8RDZTplGD74teOI18vo5sZMIBc0E3SKeTXGJTUlD5tfQL7r+lnPQw/CGnB9a+16K7HQ=
+  - AWS_DEFAULT_REGION=ap-southeast-2
 
-before_script:
-	- npm install -g claudia
-	- npm install -g mocha
-script:
-	- npm install 
-	- npm test
-	- claudia update
+before_install:
+  - npm i -g claudia
+  - npm i -g mocha 
+
+install:
+  - npm i 
+
+script: 
+  - claudia update 
