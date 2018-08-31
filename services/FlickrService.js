@@ -1,7 +1,9 @@
 var request = require('request-promise');
+var parser = require('xml2json');
 
 var flickrApi = {
-	publicPhotosUrl: 'https://api.flickr.com/services/feeds/photos_public.gne?format=json'
+	publicPhotosJson: 'https://api.flickr.com/services/feeds/photos_public.gne?format=json',
+	publicPhotosXml: 'https://api.flickr.com/services/feeds/photos_public.gne'
 }
 
 var FlickrService = {
@@ -9,14 +11,17 @@ var FlickrService = {
 
 		return new Promise((done, fail) => {
 
-			request(flickrApi.publicPhotosUrl)
-				.then(flickrRes => {
-					done(flickrRes);
+			request(flickrApi.publicPhotosXml)
+				.then(flickrXml => {
+					return parser.toJson(flickrXml);
+				})
+				.then(flickrJson => {
+					done(flickrJson);
 				})
 				.catch(err => {
 					fail(err);
 				})
-				
+
 		})
 		
 	}

@@ -33,6 +33,7 @@
   "dependencies": {
     "claudia-api-builder": "^4.1.1",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "xml2json": "^0.11.2"
   }
 }
