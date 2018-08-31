@@ -7,7 +7,7 @@ var flickrApi = {
 var FlickrService = {
 	getAll: function() {
 
-		return new Promise(done, fail => {
+		return new Promise((done, fail) => {
 			request(flickrApi.publicPhotosUrl)
 				.then(flickrRes => {
 					done(flickrRes);
