@@ -7,6 +7,13 @@ var flickrApi = {
 }
 
 var FlickrService = {
+
+
+	/**
+	* 
+	* Get all Public Flickr feed as XML, then convert to json 
+	*
+	* returns {Promise} flickrJson an array of Flickr Objects 
 	getAll: function() {
 
 		return new Promise((done, fail) => {
