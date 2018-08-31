@@ -15,5 +15,5 @@ install:
   - npm i 
 
 script: 
-  - npm deploy
-  - npm update
+  - claudia create --region ap-southeast-2 --version dev --api-module server
+  - claudia update
