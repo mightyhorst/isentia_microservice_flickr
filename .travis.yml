@@ -15,4 +15,5 @@ install:
   - npm i 
 
 script: 
-  - claudia update 
+  - npm deploy
+  - npm update
