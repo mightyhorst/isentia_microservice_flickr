@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  	- "9"
+
+before_script:
+	- npm install -g claudia
+	- npm install -g mocha
+script:
+	- npm install 
+	- npm test
+	- claudia update

@@ -1,0 +1,36 @@
+{
+  "name": "isentia_microservice_flickrapi",
+  "version": "1.0.0",
+  "description": "A microservice to manage flickr images",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha -t 10000 tests",
+    "deploy": "node_modules/.bin/claudia create --region ap-southeast-2 --version dev --api-module server",
+    "update": "node_modules/.bin/claudia update",
+    "release": "node_modules/.bin/claudia set-version --version production",
+    "start": "ntl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mitni455/isentia_microservice_flickr.git"
+  },
+  "keywords": [
+    "isentia",
+    "claudiajs",
+    "aws",
+    "lambda"
+  ],
+  "author": "nick@rock.ai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitni455/isentia_microservice_flickr/issues"
+  },
+  "homepage": "https://github.com/mitni455/isentia_microservice_flickr#readme",
+  "devDependencies": {
+    "claudia": "^5.1.1",
+    "ntl": "^3.0.0"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^4.1.1"
+  }
+}

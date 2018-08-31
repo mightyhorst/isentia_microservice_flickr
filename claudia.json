@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "isentia_microservice_flickrapi-executor",
+    "name": "isentia_microservice_flickrapi",
+    "region": "ap-southeast-2"
+  },
+  "api": {
+    "id": "s9qnovl04k",
+    "module": "server"
+  }
+}
