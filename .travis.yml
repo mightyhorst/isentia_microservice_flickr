@@ -15,8 +15,8 @@ install:
   - npm i 
 
 script: 
+  - claudia update
   # The Claudia update is failing, so lets try a fresh deploy each time 
-  # - claudia update
-  - rm -f claudia.json 
-  - claudia create --region ap-southeast-2 --version dev --api-module server
+  #- rm -f claudia.json 
+  #- claudia create --region ap-southeast-2 --version dev --api-module server
   
