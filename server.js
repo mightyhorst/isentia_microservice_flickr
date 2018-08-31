@@ -4,15 +4,18 @@ var ApiBuilder = require('claudia-api-builder'),
 
 api.get('/flickr', function(req, res, next) {
 
-	console.log('req', req ); 
-	var query = req.queryString,
-		body = req.bodypath,
-		params = req.pathParams;
+	return new Promise((done, fail)=>{
+		
+		var query = req.queryString,
+			body = req.bodypath,
+			params = req.pathParams;
 
-		FlickrService.getAll()
-			.then(flickrFeed => {
-				return flickrFeed
-			})
+			FlickrService.getAll()
+				.then(flickrFeed => {
+					return flickrFeed
+				})
+
+	})
 })
 
 

@@ -8,6 +8,7 @@ var FlickrService = {
 	getAll: function() {
 
 		return new Promise((done, fail) => {
+
 			request(flickrApi.publicPhotosUrl)
 				.then(flickrRes => {
 					done(flickrRes);
@@ -15,6 +16,7 @@ var FlickrService = {
 				.catch(err => {
 					fail(err);
 				})
+				
 		})
 		
 	}
